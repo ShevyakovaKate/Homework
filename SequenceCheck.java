@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class SequenceCheck {
   public static void main(String[] args) {
-    Scanner in = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.println("Enter some sequence:");
-    String input = in.nextLine();
+    String input = scanner.nextLine();
     String parts[] = input.split(" "); 	
     int sequence[] = new int[parts.length];
     try {
