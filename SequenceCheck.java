@@ -18,6 +18,7 @@ public class SequenceCheck {
     for (int i = 1; i < sequence.length; i++) {
         if (sequence[i] < sequence[i-1]) {
             System.out.println("Entered sequence is non-decreasing.");
+        return;
         } 
     } 
     System.out.println("Entered sequence is non-decreasing.");	
