@@ -14,6 +14,10 @@ public class SequenceCheck {
     }
   }
 
+  /**
+   * Accepts a sequence, converts it to sequence of Ints, checks for    * increase, outputs the result to the console.
+   * @param parts The checking sequnce
+   */
   public static void decreasing(String[] parts) {    	
     int sequence[] = new int[parts.length];
     try {
