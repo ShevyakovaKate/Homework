@@ -19,6 +19,7 @@ class TraingleCheck {
     }
     } catch (NumberFormatException e) {
       System.err.println("Invalid number format.");
+	  transferIntoInt(sides);
     }    
     return intSides;
   }
@@ -29,16 +30,16 @@ class TraingleCheck {
    * the traingle can be exist.
    *
    * @param intSides sides array of int.
-   * @throws IllegalArgumentException if the sides is negative.
    */
-  public boolean traingleExist(int[] intSides) throws IllegalArgumentException {
+  public boolean traingleExist(int[] intSides) {
     if (intSides.length > 3) {
       System.out.println("Wrong sides amount of the triangle.");
 	  return false;
     } 
 	for (int i = 0; i < intSides.length; i++) {
       if (intSides[i] <= 0) {
-	    throw new IllegalArgumentException("The size of side can not be negative.");
+	    System.out.println("The size of side can not be negative.");
+		return false;
 	  }
     }
     int sideA = intSides[0];
