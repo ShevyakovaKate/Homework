@@ -1,40 +1,16 @@
-import java.util.Scanner;
-
+/**
+ * The main part of Programm. Starts the programm.
+ */
 public class SequenceCheck { 
-
+  
   public static void main(String[] args) {
+    ConsolReader reader =  new ConsolReader();
+    CheckDecreasing checker =  new CheckDecreasing();
     if (args.length != 0) { 
-      decreasing(args);
+      checker.decreasing(args);
     } else {
-      Scanner scanner = new Scanner(System.in);
-      System.out.println("Enter some sequence:");
-      String input = scanner.nextLine();
-      String parts[] = input.split(" "); 
-      decreasing(parts);
+	  String[] parts = reader.read();       
+      checker.decreasing(parts);
     }
   }
-
-  /**
-   * Accepts a sequence, converts it to sequence of Ints, checks for    * increase, outputs the result to the console.
-   * @param parts The checking sequnce
-   */
-  public static void decreasing(String[] parts) {    	
-    int sequence[] = new int[parts.length];
-    try {
-      for (int i = 0; i < parts.length; i++) {
-        sequence[i] = Integer.parseInt(parts[i]);
-      }
-    } catch (NumberFormatException e) {
-      System.err.println("Invalid number format.");
-      return;
-    }
-    for (int i = 1; i < sequence.length; i++) {
-      if (sequence[i] < sequence[i-1]) {
-        System.out.println("Entered sequence is non-decreasing.");
-        return;
-      } 
-    } 
-    System.out.println("Entered sequence is non-decreasing.");	
-  }
-
 }
