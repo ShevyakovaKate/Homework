@@ -21,8 +21,8 @@ public class SequenceCheck {
   public static void decreasing(String[] parts) {    	
     int sequence[] = new int[parts.length];
     try {
-      for (int i = 0; i < parts.length; i++){
-          sequence[i] = Integer.parseInt(parts[i]);
+      for (int i = 0; i < parts.length; i++) {
+        sequence[i] = Integer.parseInt(parts[i]);
       }
     } catch (NumberFormatException e) {
       System.err.println("Invalid number format.");
