@@ -1,11 +1,24 @@
 import java.util.Scanner;
 
-public class SequenceCheck {
+public class SequenceCheck { 
+
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Enter some sequence:");
-    String input = scanner.nextLine();
-    String parts[] = input.split(" "); 	
+    if (args.length != 0) { 
+      decreasing(args);
+    } else {
+      Scanner scanner = new Scanner(System.in);
+      System.out.println("Enter some sequence:");
+      String input = scanner.nextLine();
+      String parts[] = input.split(" "); 
+      decreasing(parts);
+    }
+  }
+
+  /**
+   * Accepts a sequence, converts it to sequence of Ints, checks for    * increase, outputs the result to the console.
+   * @param parts The checking sequnce
+   */
+  public static void decreasing(String[] parts) {    	
     int sequence[] = new int[parts.length];
     try {
       for (int i = 0; i < parts.length; i++) {
@@ -19,8 +32,9 @@ public class SequenceCheck {
       if (sequence[i] < sequence[i-1]) {
         System.out.println("Entered sequence is non-decreasing.");
         return;
-        } 
+      } 
     } 
     System.out.println("Entered sequence is non-decreasing.");	
   }
+
 }
