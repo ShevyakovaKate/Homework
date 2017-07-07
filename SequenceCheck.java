@@ -9,7 +9,7 @@ public class SequenceCheck {
     if (args.length != 0) { 
       checker.decreasing(args);
     } else {
-	  String[] parts = reader.read();       
+      String[] parts = reader.read();       
       checker.decreasing(parts);
     }
   }
