@@ -5,12 +5,13 @@ public class SequenceCheck {
   
   public static void main(String[] args) {
     ConsolReader reader =  new ConsolReader();
-    CheckDecreasing checker =  new CheckDecreasing();
+    CheckerOfSequence checker =  new CheckerOfSequence();
     if (args.length != 0) { 
-      checker.decreasing(args);
+      checker.converts(args);
+      checker.isdecreasing(checker.converts(args));
     } else {
       String[] parts = reader.read();       
-      checker.decreasing(parts);
+      checker.isdecreasing(checker.converts(parts));
     }
   }
 }
